@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+<div class="carusel" style="height: 1000px">
+    <span class="carusel-item">
+
+    </span>
+</div>
+<div class="zakaz" style="height: 500px">
+    {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+</div>
+<div class="proper" style="height: 500px">
+    <!-- Приимущества -->
+    <nav class="proper-cont">
+        <action class="proper-icon">
+
+        </action>
+        <action class="proper-icon">
+
+        </action>
+        <action class="proper-icon">
+
+        </action>
+        <action class="proper-icon">
+
+        </action>
+    </nav>
+    <nav class="proper-cont">
+        <action class="proper-icon">
+
+        </action>
+        <action class="proper-icon">
+
+        </action>
+        <action class="proper-icon">
+
+        </action>
+        <action class="proper-icon">
+
+        </action>
+    </nav>
+</div>
+
+{% endblock content %}

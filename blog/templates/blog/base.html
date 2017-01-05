@@ -1,19 +1,61 @@
-{% include 'blog/header.html' %}
+<!DOCTYPE html>
 {% load staticfiles %}
 <html>
-    <head>
-        <title>Django Girls blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-    </head>
-    <body>
-    {% block header %}
-    {% endblock %}
-    <main class="page_content">
+<head>
+    <title>Django Girls blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic,cyrillic-ext"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<body>
+<header>
+    <nav class="nav-btn">
+        <a href="/">
+            <article class="header-logo">
+            </article>
+        </a>
+        <button class="header-btn btn">
+            <a href="{% url 'work' %}">
+                <h3>Work</h3>
+            </a>
+        </button>
+        <button class="header-btn btn">
+            <a href="{% url 'register' %}">
+                <h3>Company</h3>
+            </a>
+        </button>
+        <button class="header-btn btn">
+            <a href="{% url 'register' %}">
+                <h3>Payment</h3>
+            </a>
+        </button>
+    </nav>
+    <nav class="log-btn">
+        <button class="header-btn btn">
+            <a href="{% url 'login' %}">
+                <h3>LogIn</h3>
+            </a>
+        </button>
+        <button class="header-btn btn">
+            <a href="{% url 'register' %}">
+                <h3>Register</h3>
+            </a>
+        </button>
+    </nav>
+</header>
+<span class="page_content">
         {% block content %}
         {% endblock %}
-    </main>
-    </body>
+    </span>
+<footer>
+    <action class="footer-nav">
+        <h5>Pull devolopment 2017, all right reserved.</h5>
+        <a href="">
+            Tell about bags
+        </a>
+    </action>
+</footer>
+</body>
 </html>

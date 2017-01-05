@@ -45,3 +45,33 @@ h1, h2, h3, h4 {
 .post h1 a, .post h1 a:visited {
     color: #000000;
 }
+
+.header-logo {
+    background-image: url(../img/main/logo.png);
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+}
+header {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(70,70,70,1);
+    box-shadow: 0 0 5px white;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: flex;
+}
+
+.header-btn {
+    background-color: transparent;
+}
+
+body {
+    background-color: rgba(20, 20, 20, 1);
+}
+
+.zakaz {
+    overflow: auto;
+}

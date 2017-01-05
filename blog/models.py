@@ -17,3 +17,30 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Company(models.Model):
+    name = models.CharField(max_length=64)
+    email = models.CharField(max_length=64)
+    logo = models.ImageField
+    created_date = models.DateTimeField(
+            default=timezone.now)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
+
+class Carusel(models.Model):
+    name = models.CharField(max_length=64)
+    img = models.ImageField()
+    created_date = models.DateTimeField(
+            default=timezone.now)
+
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.title
