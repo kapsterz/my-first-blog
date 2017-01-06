@@ -48,12 +48,14 @@ h1, h2, h3, h4 {
 
 .header-logo {
     background-image: url(../img/main/logo.png);
-    height: 100px;
-    width: 100px;
+    height: 75%;
+    width: 60px;
     background-size: contain;
+    background-repeat: no-repeat;
+    margin: 12.5% 0;
 }
 header {
-    height: 100px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     background-color: rgba(70,70,70,1);
@@ -75,3 +77,24 @@ body {
 .zakaz {
     overflow: auto;
 }
+
+.nav-btn {
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 3%;
+}
+
+.log-btn {
+    justify-content: space-between;
+    width: 18%;
+    margin-right: 3%;
+}
+.header-txt {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.carusel-item {
+
+}
+

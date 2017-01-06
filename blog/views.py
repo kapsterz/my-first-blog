@@ -70,3 +70,7 @@ def login(request):
 def work(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/work.html', {'posts': posts})
+
+def company(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/company.html', {'posts': posts})

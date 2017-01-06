@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<action class="main-cont">
+    <h1 class="font-main">Company list</h1>
+    {% for post in posts %}
+    <action>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </action>
+    {% endfor %}
+</action>
+{% endblock content %}
